@@ -3,10 +3,9 @@ import mysql from 'mysql';
 import cors from "cors";
 import jwt from "jsonwebtoken";
 import bycrpt from "bcrypt";
+import dotenv from "dotenv"
 import cookieParser from "cookie-parser";
 const salt = 16;
-import dotenv from "dotenv";
-
 dotenv.config();
  
 const app = express();

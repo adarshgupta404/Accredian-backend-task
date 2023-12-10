@@ -10,11 +10,14 @@ dotenv.config();
  
 const app = express();
 app.use(express.json());
-app.use(cors({
-    origin:["https://accredian-frontend-task-one-kappa.vercel.app"],
-    methods:["POST", "GET"], 
-    credentials: true
-}));
+app.use(
+    cors({
+      origin: "https://accredian-frontend-task-one-kappa.vercel.app",
+      methods: ["POST", "GET"],
+      credentials: true,
+    })
+  );
+app.options("*", cors());
 app.use(cookieParser());
 const PORT = process.env.PORT || 8000;
 const db = mysql.createConnection({

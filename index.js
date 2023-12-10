@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(
     cors({
-      origin: ["https://accredian-frontend-task-one-kappa.vercel.app", "http://localhost:3000"],
+      origin: ["https://accredian-frontend-task-adarshgupta404.vercel.app"],
       methods: ["POST", "GET"],
       credentials: true,
     })
